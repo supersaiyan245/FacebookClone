@@ -48,8 +48,6 @@ _**Facebook Clone** I am making a clone of the popular social media site known a
 
 ### Libraries and Dependencies
 
-> Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
-
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
 |      React       | _Lorem ipsum dolor sit amet, consectetur._ |
@@ -65,11 +63,11 @@ _**Facebook Clone** I am making a clone of the popular social media site known a
 
 > Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
 
-![Dummy Link](url)
+![Homepage](https://engineering.fb.com/wp-content/uploads/2020/05/1.-Home-Setting-Light-Mode.png?resize=1536,864)
 
 - Desktop Landing
 
-![Dummy Link](url)
+![Profile Page](https://www.howtogeek.com/wp-content/uploads/2017/08/1profile.png?trim=1,1&bg-color=000&pad=1,1)
 
 - Desktop Hero
 
@@ -135,7 +133,7 @@ src
 
 > Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
 
-![ERD Sample](https://www.howtogeek.com/wp-content/uploads/2017/08/1profile.png?trim=1,1&bg-color=000&pad=1,1)
+![Screenshot (361)](https://user-images.githubusercontent.com/50060155/145606043-9e19bbc5-2dc0-4d59-b801-5a773b66101b.png)
 <br>
 
 ***
