@@ -135,7 +135,7 @@ src
 
 > Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
 
-![ERD Sample](\\wsl$\Ubuntu-20.04\home\joseph\GA\P4\.github\Screenshot (361).png)
+![ERD Sample](https://www.howtogeek.com/wp-content/uploads/2017/08/1profile.png?trim=1,1&bg-color=000&pad=1,1)
 <br>
 
 ***
