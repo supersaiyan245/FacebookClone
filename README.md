@@ -96,12 +96,12 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Create Post form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create Comment form |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Create Back-End     |          |     6 hrs      |     3 hrs     |     TBD     |
-| Connect Back-End to Front End |          |     6 hrs      |     3 hrs     |     TBD     |
-| Create widgets      |          |     6 hrs      |     3 hrs     |     TBD     |
-| Add User Authentication   |          |     6 hrs      |     3 hrs     |     TBD     |
+| Create Homepage form    |    H     |     10 hrs      |     2 hrs     |    3 hrs    |
+| Create Sign In      |    H     |     10 hrs      |     1 hrs     |     TBD     |
+| Create Sign Up      |    H      |     5 hrs      |     3 hrs     |     TBD     |
+| Create Back-End     |     H     |     20 hrs      |     3 hrs     |     TBD     |
+| Create widgets      |   H       |     6 hrs      |     3 hrs     |     TBD     |
+| Add User Authentication   |  H        |     20 hrs      |     3 hrs     |     TBD     |
 
 
 <br>
@@ -109,8 +109,6 @@ src
 ### Server (Back End)
 
 #### ERD Model
-
-> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
 
 ![Screenshot (361)](https://user-images.githubusercontent.com/50060155/145606043-9e19bbc5-2dc0-4d59-b801-5a773b66101b.png)
 <br>
