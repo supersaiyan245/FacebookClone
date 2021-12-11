@@ -62,9 +62,11 @@ I am making a clone of the popular social media site known as Facebook. My clone
 ![Screenshot (362)](https://user-images.githubusercontent.com/50060155/145655863-1c888356-f773-41b3-b64b-f0b035f205a8.png)
 
 - Desktop Home
+
 ![Screenshot (363)](https://user-images.githubusercontent.com/50060155/145655897-bd572b75-6088-4081-873e-dd019cb68f7d.png)
 
 - Desktop SignUp
+
 ![Screenshot (364)](https://user-images.githubusercontent.com/50060155/145656034-4f24fd2d-77a9-4b2a-b547-605af7648d0b.png)
  
 
@@ -117,7 +119,7 @@ src
 
 ## Post-MVP
 
-> My PMVP will have User Authentication for every post and comment made. 
+> My PMVP will allow users to comment on posts. 
 
 ***
 
