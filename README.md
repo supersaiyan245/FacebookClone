@@ -1,9 +1,5 @@
 
-# PROJECT 4 README <!-- omit in toc -->
-
-> The Project Planning section **should be completed** for your project pitch with instructors.
->
-> To ensure correct Markdown, copy and paste the raw template code into your project repo README file. Remove ALL template instructions and replace with your project details.
+# MessageMe README <!-- omit in toc -->
 
 - [Overview](#overview)
 - [MVP](#mvp)
@@ -24,14 +20,14 @@
 
 ## Overview
 
-_**Facebook Clone** I am making a clone of the popular social media site known as Facebook. My clone will only have minimal features that are active on Facebook's Home Page.
+I am making a clone of the popular social media site known as Facebook. My clone will only have minimal features that are active on Facebook's Home Page.
 
 
 <br>
 
 ## MVP
 
-> My MVP will have a functional Facebook page with where anyone can post and comment with making an account
+> My MVP will have a functional Facebook page with where a user can make a post
 
 <br>
 
@@ -61,41 +57,22 @@ _**Facebook Clone** I am making a clone of the popular social media site known a
 
 #### Wireframes
 
-> Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
-
-![Homepage](https://engineering.fb.com/wp-content/uploads/2020/05/1.-Home-Setting-Light-Mode.png?resize=1536,864)
-
 - Desktop Landing
 
-![Profile Page](https://www.howtogeek.com/wp-content/uploads/2017/08/1profile.png?trim=1,1&bg-color=000&pad=1,1)
+![Screenshot (362)](https://user-images.githubusercontent.com/50060155/145655863-1c888356-f773-41b3-b64b-f0b035f205a8.png)
 
-- Desktop Hero
+- Desktop Home
+![Screenshot (363)](https://user-images.githubusercontent.com/50060155/145655897-bd572b75-6088-4081-873e-dd019cb68f7d.png)
 
-![Dummy Link](url)
-
-- Resource Index
-
-![Dummy Link](url)
-
-- Resource Show
-
-![Dummy Link](url)
-
-- Tablet Resource Index
-
-![Dummy Link](url)
-
-- Mobile Resource Index
+- Desktop SignUp
+![Screenshot (364)](https://user-images.githubusercontent.com/50060155/145656034-4f24fd2d-77a9-4b2a-b547-605af7648d0b.png)
+ 
 
 #### Component Tree
-
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. Include a link to your component tree
 
 [Component Tree Sample](https://gist.git.generalassemb.ly/davidtwhitlatch/414107e2560ae0bb65e233570f2fe056#file-component-tree-png)
 
 #### Component Architecture
-
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
 
 ``` structure
 
