@@ -99,7 +99,7 @@ src
 | Create Homepage form    |    H     |     10 hrs      |     2 hrs     |    3 hrs    |
 | Create Sign In      |    H     |     10 hrs      |     1 hrs     |     TBD     |
 | Create Sign Up      |    H      |     5 hrs      |     3 hrs     |     TBD     |
-| Create Back-End     |     H     |     20 hrs      |     3 hrs     |     TBD     |
+| Create Back-End     |     H     |     20 hrs      |     15 hrs     |     15     |
 | Create widgets      |   H       |     6 hrs      |     3 hrs     |     TBD     |
 | Add User Authentication   |  H        |     20 hrs      |     3 hrs     |     TBD     |
 
