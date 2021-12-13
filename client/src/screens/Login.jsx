@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 
 export default function Login(props) {
   const [formData, setFormData] = useState({
-    username: '',
+    email: '',
     password: '',
   });
-  const { username, password } = formData;
+  const {email, password } = formData;
   const { handleLogin } = props;
 
   const handleChange = (e) => {
@@ -17,18 +17,18 @@ export default function Login(props) {
     }));
   };
 
-  eturn (
+  return (
     <form onSubmit={(e)=> {
       e.preventDefault();
       handleLogin(formData);
     }}>
       <h3>Login</h3>
       <label>
-        Username:
+       Email:
         <input
           type='text'
-          name='username'
-          value={username}
+          name='email'
+          value={email}
           onChange={handleChange}
           />
           </label>
