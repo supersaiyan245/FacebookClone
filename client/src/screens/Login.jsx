@@ -30,3 +30,21 @@ export default function Login(props) {
           name='username'
           value={username}
           onChange={handleChange}
+          />
+          </label>
+          <br />
+          <label>
+            Password:
+            <input
+              type='password'
+              name='password'
+              value={password}
+              onChange={handleChange}
+            />
+          </label>
+          <br />
+          <Link to='/register'>Register</Link>
+          <button>Submit</button>
+        </form>
+      );
+    }
