@@ -16,3 +16,17 @@ export default function Login(props) {
       [name]: value,
     }));
   };
+
+  eturn (
+    <form onSubmit={(e)=> {
+      e.preventDefault();
+      handleLogin(formData);
+    }}>
+      <h3>Login</h3>
+      <label>
+        Username:
+        <input
+          type='text'
+          name='username'
+          value={username}
+          onChange={handleChange}
