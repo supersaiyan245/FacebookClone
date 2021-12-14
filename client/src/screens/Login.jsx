@@ -44,7 +44,6 @@ export default function Login({ handleLogin }) {
             />
           </label>
           <br />
-          <Link to='/register'>Register</Link>
           <button>Submit</button>
         </form>
       );
