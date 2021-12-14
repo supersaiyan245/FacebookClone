@@ -1,27 +1,27 @@
 import api from './apiConfig';
 
 export const getAllPosts = async () => {
-  const resp = await api.get('/post');
+  const resp = await api.get('/posts');
   return resp.data;
 };
 
 export const getOnePost = async (id) => {
-  const resp = await api.get(`/post/${id}`);
+  const resp = await api.get(`/posts/${id}`);
   return resp.data;
 };
 
 export const postPost = async (postData) => {
-  const resp = await api.post('/post', { post: postData });
+  const resp = await api.post('/posts', { post: postData });
   return resp.data;
 };
 
 export const putPost = async (id, postData) => {
-  const resp = await api.put(`/post/${id}`, { post: postData });
+  const resp = await api.put(`/posts/${id}`, { post: postData });
   return resp.data;
 };
 
 export const deletePost = async (id) => {
-  await api.delete(`/post/${id}`);
+  await api.delete(`/posts/${id}`);
 };
 
 export const addPost = async (idData) => {
