@@ -1,5 +1,6 @@
 import React from 'react';
 import Login from '../screens/Login.jsx'; 
+import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import {
   loginUser,
@@ -9,12 +10,12 @@ import {
 } from '../services/auth.js';
 
 export default function Layout(props) {
-  // const [currentUser, setCurrentUser] = useState(null);
+  const [currentUser, setCurrentUser] = useState(null);
 
   const handleLogin = async (formData) => {
-  //   const userData = await loginUser(formData);
-  //   setCurrentUser(userData);
-    history.push('/');
+    const userData = await loginUser(formData);
+    setCurrentUser(userData);
+    // history.push('/');
   };
 
   return (
