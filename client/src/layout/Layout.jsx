@@ -2,6 +2,7 @@ import React from 'react';
 import Login from '../screens/Login.jsx'; 
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import Register from '../screens/Register.jsx';
 import {
   loginUser,
   registerUser,
@@ -17,11 +18,13 @@ export default function Layout(props) {
     setCurrentUser(userData);
     // history.push('/');
   };
+  
 
   return (
     <div className="gridcontainers">
         <navbar>
-          <Login handleLogin={ handleLogin }/>
+        <Login handleLogin={handleLogin} />
+          <Register />
         </navbar>
         <aside>
         </aside>

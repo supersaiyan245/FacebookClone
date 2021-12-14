@@ -1,8 +1,11 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Login({ handleLogin }) {
+export default function Register({ handleRegister }) {
   const [formData, setFormData] = useState({
+    first_name: '',
+    last_name: '',
+    age: 0,
     email: '',
     password: '',
   });
@@ -20,6 +23,13 @@ export default function Login({ handleLogin }) {
     e.preventDefault();
     handleLogin(formData);
   }
+
+  
+  const handleRegister = async (formData) => {
+    const userData = await registerUser(formData);
+    // setCurrentUser(userData);
+    // history.push('/');
+  };
 
   return (
     <form onSubmit={handleSubmit}>
