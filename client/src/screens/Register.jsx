@@ -21,15 +21,10 @@ export default function Register({ handleRegister }) {
   
   const handleSubmit = (e) => {
     e.preventDefault();
-    handleLogin(formData);
+    handleRegister(formData);
   }
 
   
-  const handleRegister = async (formData) => {
-    const userData = await registerUser(formData);
-    // setCurrentUser(userData);
-    // history.push('/');
-  };
 
   return (
     <form onSubmit={handleSubmit}>
