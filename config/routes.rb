@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  post '/auth/login', to: 'authentications#login'
-  get '/auth/verify', to: 'authentications#verify'
+  post '/auth/login', to: 'authentication#login'
+  get '/auth/verify', to: 'authentication#verify'
   
   resources :users, :only => [:create, :show] 
   resources :users do
