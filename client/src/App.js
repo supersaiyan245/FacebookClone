@@ -17,7 +17,7 @@ function App() {
   const handleLogin = async (formData) => {
     const userData = await loginUser(formData);
     setCurrentUser(userData);
-    history.push('/Home');
+    history.push('/');
   };
 
   
@@ -32,7 +32,7 @@ function App() {
   const handleRegister = async (formData) => {
     const userData = await registerUser(formData);
     setCurrentUser(userData);
-    history.push('/Home');
+    history.push('/');
   };
 
   const handleLogout = () => {

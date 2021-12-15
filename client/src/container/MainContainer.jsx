@@ -11,7 +11,7 @@ export default function MainContainer({ currentUser }) {
   const [posts, setPosts] = useState([]);
   const [users, setUsers] = useState([]);
   const history = useHistory();
-
+  console.log(posts)
   useEffect(() => {
     const fetchUsers = async () => {
       const Users = await getAllUsers();

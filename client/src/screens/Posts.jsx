@@ -5,8 +5,9 @@ export default function Posts({ posts, handlePostDelete, currentUser }) {
     <div>
       {posts.map((post) => (
         <div className="postcontainer" key={post.id}>
-          <Link to={`/posts/${post.id}`}>
-          <p>{post.content}</p>
+          <Link to={`/${post.id}`}>
+            <p>{post.content}</p>
+            <img src={post.imgUrl}></img>
           </Link>
           {currentUser?.id === post.user_id && (
             <>
