@@ -34,21 +34,23 @@ function App() {
   return (
     <Route path="/Home">
       <div className="App">
-        <navbar>
-          <Route path='/login'>
-            <Login handleLogin={handleLogin} />
-          </Route>
-          <Route path='/register'>
-            <Register handleRegister={handleRegister} />
-          </Route>
-        </navbar>
-        <aside>
-        </aside>
-        <main>
-          
-        </main>
-        <aside>
-        </aside>
+        <Switch>
+          <navbar>
+            <Route path='/login'>
+              <Login handleLogin={handleLogin} />
+            </Route>
+            <Route path='/register'>
+              <Register handleRegister={handleRegister} />
+            </Route>
+          </navbar>
+          <aside>
+          </aside>
+          <main>
+            
+          </main>
+          <aside>
+          </aside>
+      </Switch>
       </div>
     </Route>
   );
