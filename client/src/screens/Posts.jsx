@@ -1,9 +1,13 @@
 import { Link } from 'react-router-dom';
 
-export default function Posts({ posts, handleFoodDelete, currentUser }) {
+export default function Posts({ posts, handlePostDelete, currentUser }) {
   return (
     <div>
-      <h3>Posts</h3>
+      {posts.map((post) => (
+        <div className="postcontainer" key={post.id}>
+          <p>{post.content}</p> 
+        </div>
+      ))}
     </div>
   )
 }
