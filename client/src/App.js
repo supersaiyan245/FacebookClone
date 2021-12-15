@@ -1,6 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
 import Layout from './layout/Layout.jsx';
+import { useState, useEffect } from 'react';
 import { loginUser, registerUser,
   verifyUser,
   removeToken
@@ -12,17 +12,26 @@ import Register from './screens/Register.jsx';
 function App() {
 
   const [currentUser, setCurrentUser] = useState(null);
-
+  const history = useHistory();
   const handleLogin = async (formData) => {
     const userData = await loginUser(formData);
     setCurrentUser(userData);
-    // history.push('/');
+    history.push('/');
   };
+
+  
+  useEffect(() => {
+    const handleVerify = async () => {
+      const userData = await verifyUser();
+      setCurrentUser(userData);
+    };
+    handleVerify();
+  }, []);
   
   const handleRegister = async (formData) => {
     const userData = await registerUser(formData);
     setCurrentUser(userData);
-    // history.push('/');
+    history.push('/');
   };
 
   const handleLogout = () => {
