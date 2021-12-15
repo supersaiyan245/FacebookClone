@@ -3,11 +3,12 @@ import { Switch, Route, useHistory } from 'react-router-dom';
 import Posts from '../screens/Posts.jsx';
 import PostCreate from '../screens/PostCreate.jsx';
 import PostEdit from '../screens/PostEdit.jsx';
-import { deletePost, postPost, putPost } from '../services/post.js';
-
+import { getAllPosts, getOnePost, deletePost, postPost, putPost } from '../services/post.js';
+import { getAllUsers } from '../services/user.js';
+import Users from '../screens/Users.jsx';
 
 export default function MainContainer({ currentUser }) {
-  const [Posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState([]);
   const [users, setUsers] = useState([]);
   const history = useHistory();
 
@@ -29,7 +30,7 @@ export default function MainContainer({ currentUser }) {
 
   const handlePostCreate = async (formData) => {
     const newPost = await postPost(formData);
-    setPosts((prevState) => [...prevState, newFood]);
+    setPosts((prevState) => [...prevState, newPost]);
     history.push('/');
   };
 
@@ -47,4 +48,25 @@ export default function MainContainer({ currentUser }) {
     );
     history.push('/');
   };
+
+  
+  return (
+    <div>
+      <Switch>
+        <Route path='/posts/:id/edit'>
+          <PostEdit posts={posts} handlePostUpdate={handlePostUpdate} />
+        </Route>
+        <Route path='/posts/new'>
+          <PostCreate handlePostCreate={handlePostCreate} />
+        </Route>
+        <Route path='/'>
+          <Posts
+            posts={posts}
+            handlePostDelete={handlePostDelete}
+            currentUser={currentUser}
+          />
+        </Route>
+      </Switch>
+    </div>
+  )
 }
