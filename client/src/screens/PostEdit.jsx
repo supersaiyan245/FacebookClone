@@ -10,3 +10,18 @@ export default function PostEdit({ posts, handlePostUpdate }) {
   const { id } = useParams();
 
  
+  useEffect(() => {
+    const fillOutFormData = () => {
+      const postItem = posts.find((post) => post.id === Number(id));
+      setFormData({ name: postItem.name });
+    };
+    if (posts.length) fillOutFormData();
+  }, [posts, id]);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
