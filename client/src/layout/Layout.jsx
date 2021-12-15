@@ -14,7 +14,10 @@ export default function Layout(currentUser, handleLogout) {
           <button onClick={handleLogout}>Logout</button>
         </div>
       ) : (
-        <Link to='/Login'>Login</Link>
+          <Link to='/Login'>
+            <h5>Login</h5>
+            <h5>Register</h5>
+          </Link>
       )}
     </div>
   );

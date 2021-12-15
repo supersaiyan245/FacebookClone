@@ -8,6 +8,7 @@ import { loginUser, registerUser,
 import { Switch, Route, useHistory } from 'react-router-dom';
 import Login from './screens/Login.jsx';
 import Register from './screens/Register.jsx';
+import Container from './container/MainContainer.jsx'
 
 function App() {
 
@@ -57,7 +58,7 @@ function App() {
           <aside>
           </aside>
           <main>
-            
+            <Container currentUser={currentUser}/>
           </main>
           <aside>
           </aside>
