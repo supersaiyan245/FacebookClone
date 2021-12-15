@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Layout from './layout/Layout.jsx';
-import { loginUser registerUser,
+import { loginUser, registerUser,
   verifyUser,
   removeToken} from './services/auth';
 
@@ -23,9 +23,21 @@ function App() {
 
   return (
     <div className="App">
-      <Route>
-        <Layout handleLogin={handleLogin} />
-      </Route>
+       <navbar>
+        <Route path='/login'>
+          <Login handleLogin={handleLogin} />
+        </Route>
+        <Route path='/register'>
+          <Register handleRegister={handleRegister} />
+        </Route>
+      </navbar>
+      <aside>
+      </aside>
+      <main>
+        {props.children}
+      </main>
+      <aside>
+      </aside>
     </div>
   );
 }
