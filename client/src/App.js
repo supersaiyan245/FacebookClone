@@ -6,7 +6,9 @@ import { loginUser } from './services/auth';
 function App() {
   return (
     <div className="App">
-      <Layout/>
+      <Route>
+        <Layout handleLogin={handleLogin} />
+      </Route>
     </div>
   );
 }
