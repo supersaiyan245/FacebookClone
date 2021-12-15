@@ -60,12 +60,14 @@ export default function MainContainer({ currentUser }) {
           <PostCreate handlePostCreate={handlePostCreate} />
         </Route>
         <Route path='/'>
-          <Users users={users}/>
-          <Posts
-            posts={posts}
-            handlePostDelete={handlePostDelete}
-            currentUser={currentUser}
-          />
+          <div className="allposts">
+            <Users users={users}/>
+            <Posts
+              posts={posts}
+              handlePostDelete={handlePostDelete}
+              currentUser={currentUser}
+              />
+          </div>
         </Route>
       </Switch>
     </div>
