@@ -22,23 +22,25 @@ function App() {
   };
 
   return (
-    <div className="App">
-       <navbar>
-        <Route path='/login'>
-          <Login handleLogin={handleLogin} />
-        </Route>
-        <Route path='/register'>
-          <Register handleRegister={handleRegister} />
-        </Route>
-      </navbar>
-      <aside>
-      </aside>
-      <main>
-        {props.children}
-      </main>
-      <aside>
-      </aside>
-    </div>
+    <Route path="/Home">
+      <div className="App">
+        <navbar>
+          <Route path='/login'>
+            <Login handleLogin={handleLogin} />
+          </Route>
+          <Route path='/register'>
+            <Register handleRegister={handleRegister} />
+          </Route>
+        </navbar>
+        <aside>
+        </aside>
+        <main>
+          
+        </main>
+        <aside>
+        </aside>
+      </div>
+    </Route>
   );
 }
 
