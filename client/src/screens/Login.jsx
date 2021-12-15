@@ -22,29 +22,34 @@ export default function Login({ handleLogin }) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h3>Login</h3>
-      <label>
-       Email:
-        <input
-          type='text'
-          name='email'
-          value={email}
-          onChange={handleChange}
-          />
-          </label>
-          <br />
-          <label>
-            Password:
-            <input
-              type='password'
-              name='password'
-              value={password}
-              onChange={handleChange}
+    <div>
+      <form onSubmit={handleSubmit}>
+        <h3>Login</h3>
+        <label>
+        Email:
+          <input
+            type='text'
+            name='email'
+            value={email}
+            onChange={handleChange}
             />
-          </label>
+            </label>
+            <br />
+            <label>
+              Password:
+              <input
+                type='password'
+                name='password'
+                value={password}
+                onChange={handleChange}
+              />
+            </label>
           <br />
-          <button>Submit</button>
-        </form>
+
+            <button>Submit</button>
+      </form>
+    <Link to="/Register">Register</Link>
+    </div>
+    
       );
     }

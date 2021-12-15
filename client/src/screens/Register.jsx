@@ -33,7 +33,7 @@ export default function Register({ handleRegister }) {
        First Name:
         <input
           type='text'
-          name='First Name`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        '
+          name='first_name`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        '
           value={first_name}
           onChange={handleChange}
           />
@@ -43,7 +43,7 @@ export default function Register({ handleRegister }) {
               Last Name:
               <input
                 type='text'
-                name='Last Name'
+                name='last_name'
                 value={last_name}
                 onChange={handleChange}
               />
@@ -62,7 +62,7 @@ export default function Register({ handleRegister }) {
               Email:
               <input
                 type='email'
-                name='Email'
+                name='email'got
                 value={email}
                 onChange={handleChange}
               />

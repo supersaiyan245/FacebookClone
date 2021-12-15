@@ -8,9 +8,9 @@ import { getAllUsers } from '../services/user.js';
 import Users from '../screens/Users.jsx';
 import Login from '../screens/Login.jsx';
 import Register from '../screens/Register.jsx';
-import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+import { Link } from 'react-router-dom';
 
-export default function MainContainer({ currentUser, handleRegister }) {
+export default function MainContainer({ currentUser, handleRegister, handleLogin }) {
   const [posts, setPosts] = useState([]);
   const [users, setUsers] = useState([]);
   const history = useHistory();
@@ -57,11 +57,10 @@ export default function MainContainer({ currentUser, handleRegister }) {
     <div>
       <Switch>
         <Route path="/Login">
-          <Login />
+          <Login handleLogin={handleLogin} />
         </Route>
-        <Link to="/Register">Register</Link>
         <Route path="/Register">
-          <Register handle />
+          <Register handleRegister={handleRegister} />
         </Route>
        <main className="edit-post">
           <Route path='/posts/:id/edit'>
