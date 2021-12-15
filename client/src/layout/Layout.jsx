@@ -15,7 +15,7 @@ export default function Layout(currentUser, handleLogout) {
         </div>
       ) : (
         <Link to='/Login'>Login</Link>
-        <Link to='/Register'>Register</Link>
+        // <Link to='/Register'>Register</Link>
       )}
     </div>
   );

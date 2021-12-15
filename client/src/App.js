@@ -6,8 +6,8 @@ import { loginUser, registerUser,
   removeToken
 } from './services/auth';
 import { Switch, Route, useHistory } from 'react-router-dom';
-import Login from '../screens/Login.jsx';
-import Register from '../screens/Register.jsx';
+import Login from './screens/Login.jsx';
+import Register from './screens/Register.jsx';
 
 function App() {
 
