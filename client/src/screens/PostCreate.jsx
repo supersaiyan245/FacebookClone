@@ -15,4 +15,23 @@ export default function PostCreate({ handlePostCreate }) {
     }));
   };
 
-
+  return (
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        handlePostCreate(formData);
+      }}
+    >
+      <h3>Create Food</h3>
+        <label>
+          Content:
+          <input type='text' name='ContentPost' value={content} onChange={handleChange} />
+        </label>
+        <label>
+          imgUrl:
+          <input type='text' name='PostImage' value={imgUrl} onChange={handleChange} />
+        </label>
+      <button>Submit</button>
+    </form>
+  );
+}
