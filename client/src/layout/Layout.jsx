@@ -6,7 +6,6 @@ export default function Layout(currentUser, handleLogout) {
 
   return (
     <div className="gridcontainers">
-       <Link to='/Home'>posts</Link>
         <h3>MessageMe</h3>
       {currentUser ? (
         <div>

@@ -17,7 +17,7 @@ function App() {
   const handleLogin = async (formData) => {
     const userData = await loginUser(formData);
     setCurrentUser(userData);
-    history.push('/');
+    history.push('/Home');
   };
 
   
@@ -32,7 +32,7 @@ function App() {
   const handleRegister = async (formData) => {
     const userData = await registerUser(formData);
     setCurrentUser(userData);
-    history.push('/');
+    history.push('/Home');
   };
 
   const handleLogout = () => {
@@ -42,7 +42,7 @@ function App() {
   };
 
   return (
-    <Route path="/Home">
+    <Route path="/">
       <div className="App">
         <Switch>
           <navbar>
