@@ -36,12 +36,14 @@ function App() {
       <div className="App">
         <Switch>
           <navbar>
-            <Route path='/login'>
-              <Login handleLogin={handleLogin} />
-            </Route>
-            <Route path='/register'>
-              <Register handleRegister={handleRegister} />
-            </Route>
+            <Layout currentUser={currentUser} handleLogout={handleLogout}>
+              `<Route path='/Login'>
+                <Login handleLogin={handleLogin} />
+              </Route>
+              <Route path='/Register'>
+                <Register handleRegister={handleRegister} />
+              </Route>`
+            </Layout>
           </navbar>
           <aside>
           </aside>
