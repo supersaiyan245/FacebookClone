@@ -3,7 +3,7 @@ import { Switch, Route, useHistory } from 'react-router-dom';
 import Posts from '../screens/Posts.jsx';
 import PostCreate from '../screens/PostCreate.jsx';
 import PostEdit from '../screens/PostEdit.jsx';
-import { getAllPosts, getOnePost, deletePost, postPost, putPost } from '../services/post.js';
+import { getAllPosts, deletePost, postPost, putPost } from '../services/post.js';
 import { getAllUsers } from '../services/user.js';
 import Users from '../screens/Users.jsx';
 
