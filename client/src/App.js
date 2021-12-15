@@ -3,7 +3,11 @@ import './App.css';
 import Layout from './layout/Layout.jsx';
 import { loginUser, registerUser,
   verifyUser,
-  removeToken} from './services/auth';
+  removeToken
+} from './services/auth';
+import { Switch, Route, useHistory } from 'react-router-dom';
+import Login from '../screens/Login.jsx';
+
 
 function App() {
 
@@ -19,6 +23,12 @@ function App() {
     const userData = await registerUser(formData);
     setCurrentUser(userData);
     // history.push('/');
+  };
+
+  const handleLogout = () => {
+    setCurrentUser(null);
+    localStorage.removeItem('authToken');
+    removeToken();
   };
 
   return (
