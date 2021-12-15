@@ -25,3 +25,25 @@ export default function PostEdit({ posts, handlePostUpdate }) {
       [name]: value,
     }));
   };
+
+  
+  return (
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        handlePostUpdate(id, formData);
+      }}
+    >
+      <h3>Edit Post</h3>
+        <label>
+          Content:
+          <input type='text' name='content' value={content} onChange={handleChange} placeholder='Edit your thoughts'/>
+        </label>
+        <label>
+          imgUrl:
+          <input type='url' name='imgUrl' value={imgUrl} onChange={handleChange} placeholder='Change your image'/>
+        </label>
+      <button>Submit</button>
+    </form>
+  );
+}
