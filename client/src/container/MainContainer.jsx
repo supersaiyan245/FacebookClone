@@ -3,7 +3,7 @@ import { Switch, Route, useHistory } from 'react-router-dom';
 import Posts from '../screens/Posts.jsx';
 import PostCreate from '../screens/PostCreate.jsx';
 import PostEdit from '../screens/PostEdit.jsx';
-import { deletePost, postPost } from '../services/post.js';
+import { deletePost, postPost, putPost } from '../services/post.js';
 
 
 export default function MainContainer({ currentUser }) {
@@ -30,11 +30,21 @@ export default function MainContainer({ currentUser }) {
   const handlePostCreate = async (formData) => {
     const newPost = await postPost(formData);
     setPosts((prevState) => [...prevState, newFood]);
-    history.push('/foods');
+    history.push('/');
   };
 
   const handlePostDelete = async (id) => {
     await deletePost(id);
     setPosts((prevState) => prevState.filter((post) => post.id !== id));
+  };
+  
+  const handlePostUpdate = async (id, formData) => {
+    const newPost = await putPost(id, formData);
+    setPosts((prevState) =>
+      prevState.map((post) => {
+        return post.id === Number(id) ? newPost : post;
+      })
+    );
+    history.push('/');
   };
 }
