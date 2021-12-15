@@ -7,7 +7,6 @@ import { loginUser, registerUser,
 } from './services/auth';
 import { Switch, Route, useHistory } from 'react-router-dom';
 import Login from './screens/Login.jsx';
-import Register from './screens/Register.jsx';
 import Container from './container/MainContainer.jsx'
 
 function App() {
@@ -42,29 +41,15 @@ function App() {
   };
 
   return (
-    <Route path="/">
-      <div className="App">
-        <Switch>
-          <navbar>
-            <Layout currentUser={currentUser} handleLogout={handleLogout}>
-              `<Route path='/Login'>
-                <Login handleLogin={handleLogin} />
-              </Route>
-              <Route path='/Register'>
-                <Register handleRegister={handleRegister} />
-              </Route>`
-            </Layout>
-          </navbar>
-          <aside>
-          </aside>
-          <main>
-            <Container currentUser={currentUser}/>
-          </main>
-          <aside>
-          </aside>
+  <div className='App'>
+    <Layout currentUser={currentUser} handleLogout={handleLogout}>
+      <Switch>
+        <Route path='/'>
+          <Container currentUser={currentUser} />
+        </Route>
       </Switch>
-      </div>
-    </Route>
+    </Layout>
+  </div>
   );
 }
 

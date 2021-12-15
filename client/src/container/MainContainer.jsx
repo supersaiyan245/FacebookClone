@@ -6,8 +6,11 @@ import PostEdit from '../screens/PostEdit.jsx';
 import { getAllPosts, deletePost, postPost, putPost } from '../services/post.js';
 import { getAllUsers } from '../services/user.js';
 import Users from '../screens/Users.jsx';
+import Login from '../screens/Login.jsx';
+import Register from '../screens/Register.jsx';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
-export default function MainContainer({ currentUser }) {
+export default function MainContainer({ currentUser, handleRegister }) {
   const [posts, setPosts] = useState([]);
   const [users, setUsers] = useState([]);
   const history = useHistory();
@@ -53,22 +56,37 @@ export default function MainContainer({ currentUser }) {
   return (
     <div>
       <Switch>
-        <Route path='/posts/:id/edit'>
+        <Route path="/Login">
+          <Login />
+        </Route>
+        <Link to="/Register">Register</Link>
+        <Route path="/Register">
+          <Register handle />
+        </Route>
+       <main className="edit-post">
+          <Route path='/posts/:id/edit'>
           <PostEdit posts={posts} handlePostUpdate={handlePostUpdate} />
-        </Route>
-        <Route path='/posts/new'>
-          <PostCreate handlePostCreate={handlePostCreate} />
-        </Route>
-        <Route path='/'>
-          <div className="allposts">
-            <Users users={users}/>
-            <Posts
-              posts={posts}
-              handlePostDelete={handlePostDelete}
-              currentUser={currentUser}
+          </Route>
+        </main>
+        <article className="create-new-post">
+          <Route path='/posts/new'>
+            <PostCreate handlePostCreate={handlePostCreate} />
+          </Route>
+        </article>
+        <main>
+          <Route path='/'>
+            <div className="allposts">
+              <Users users={users}/>
+              <Posts
+                posts={posts}
+                handlePostDelete={handlePostDelete}
+                currentUser={currentUser}
               />
-          </div>
-        </Route>
+            </div>
+          </Route>
+        </main>
+        <aside className="left"></aside>
+        <aside className="right"></aside>
       </Switch>
     </div>
   )

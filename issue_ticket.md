@@ -1,10 +1,10 @@
 PROJECT ISSUE TICKET
 
 Unexpected Behavior
-Front end is not rendering
+Register and other components aren't rendering
 
 Expected Behavior
-Front end should render with my written logic
+They should be rendering
 
 Reproduce the Error
 
@@ -16,12 +16,10 @@ Reproduce the Error
 6. See the subsequent error in the console.
 
 Documentation
-404 Create Error not found and auth/verify but auth works on postman hence the 404.
-I suspect there's an issue with my routing
+No errors at the current moment
 
 
 Attempted Resolution
-I tried rearranging the routes
+I've tried moving components around multiple times
 
-1. https://www.allconnect.com/blog/404-page-not-found-error-explained#:~:text=A%20404%20page%20not%20found%20error%20comes%20from%20the%20site,the%20webpage.
-2. https://www.allconnect.com/blog/404-page-not-found-error-explained#:~:text=A%20404%20page%20not%20found%20error%20comes%20from%20the%20site,the%20webpage.
+I've been looking at the class recordings
