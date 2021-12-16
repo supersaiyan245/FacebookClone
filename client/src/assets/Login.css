@@ -5,6 +5,8 @@
 
 .loginContainer {
   background-image: linear-gradient(to top right, #acd5d7, #b9bcc2, #34c7cf );
+  border-radius: 10px;
+  box-shadow: 1px 0px 0px 0.2px antiquewhite;
   width: 20vw;
   height: 50vh;
   position: relative;
@@ -36,5 +38,7 @@ p {
 }
 
 button {
-  margin: 0 auto;
+  position: relative;
+  top: 2vh;
+  left: 10vh;
 }
