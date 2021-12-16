@@ -13,7 +13,7 @@ export default function Posts({ posts, handlePostDelete, currentUser }) {
               <Link to={`/posts/${post.id}/edit`}>
                 <button>Edit</button>
               </Link>
-              <button onClick={() => handlePostDelete(post.id)}>Delete</button>
+              <button onClick={() => handlePostDelete(currentUser.id, post.id)}>Delete</button>
             </>
           )}
         </div>

@@ -10,8 +10,8 @@ export const getOnePost = async (user_id, id) => {
   return resp.data;
 };
 
-export const postPost = async (postData) => {
-  const resp = await api.post('/posts', { post: postData });
+export const postPost = async (user_id, postData) => {
+  const resp = await api.post(`/users/${user_id}/posts`, { post: postData });
   return resp.data;
 };
 

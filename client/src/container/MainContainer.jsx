@@ -31,14 +31,14 @@ export default function MainContainer({ currentUser, handleRegister, handleLogin
     fetchPosts(currentUser?.id);
   }, []);
 
-  const handlePostCreate = async (formData) => {
-    const newPost = await postPost(formData);
+  const handlePostCreate = async (user_id, postData) => {
+    const newPost = await postPost(user_id, postData);
     setPosts((prevState) => [...prevState, newPost]);
     history.push('/');
   };
 
-  const handlePostDelete = async (id) => {
-    await deletePost(id);
+  const handlePostDelete = async (user_id, id) => {
+    await deletePost(user_id, id);
     setPosts((prevState) => prevState.filter((post) => post.id !== id));
   };
   
@@ -62,15 +62,18 @@ export default function MainContainer({ currentUser, handleRegister, handleLogin
         <Route path="/Register">
           <Register handleRegister={handleRegister} />
         </Route>
-        <Route path='/posts/:id/edit'>
+        <Route path='/posts/:id/edit' exact>
           <PostEdit
             posts={posts}
             currentUser={currentUser}
             handlePostUpdate={handlePostUpdate} />
         </Route>
-        <Route path='/posts/new'>
-          <PostCreate handlePostCreate={handlePostCreate} />
-        </Route>
+          <Route path='/create' exact>
+            <PostCreate
+              handlePostCreate={handlePostCreate}
+              currentUser={currentUser}
+            />
+          </Route>
         <Route path="/" exact>
           <Users users={users}/>
           <Posts

@@ -22,10 +22,10 @@ export default function Login({ handleLogin }) {
   }
 
   return (
-    <div>
+    <div className="loginContainer">
       <form onSubmit={handleSubmit}>
         <h3>Login</h3>
-        <label>
+        <label className="email">
         Email:
           <input
             type='text'
@@ -35,7 +35,7 @@ export default function Login({ handleLogin }) {
             />
             </label>
             <br />
-            <label>
+            <label className="password">
               Password:
               <input
                 type='password'
@@ -48,7 +48,6 @@ export default function Login({ handleLogin }) {
 
             <button>Submit</button>
       </form>
-    <Link to="/Register">Register</Link>
     </div>
     
       );

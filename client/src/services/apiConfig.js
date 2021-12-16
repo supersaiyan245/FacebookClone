@@ -1,6 +1,9 @@
 import axios from 'axios';
 
-const baseUrl = 'http://localhost:3000';
+
+const baseUrl = 'production'
+  ? 'https://messageme-api.herokuapp.com/'
+  : 'http://localhost:3000';
 
 const api = axios.create({
   baseURL: baseUrl,
