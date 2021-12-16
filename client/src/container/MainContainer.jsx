@@ -42,8 +42,8 @@ export default function MainContainer({ currentUser, handleRegister, handleLogin
     setPosts((prevState) => prevState.filter((post) => post.id !== id));
   };
   
-  const handlePostUpdate = async (id, formData) => {
-    const newPost = await putPost(id, formData);
+  const handlePostUpdate = async ( user_id, id, formData) => {
+    const newPost = await putPost(user_id, id, formData);
     setPosts((prevState) =>
       prevState.map((post) => {
         return post.id === Number(id) ? newPost : post;

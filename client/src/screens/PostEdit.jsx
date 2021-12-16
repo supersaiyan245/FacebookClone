@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
-export default function PostEdit({ currentUser, posts, handlePostUpdate }) {
+export default function PostEdit({ currentUser, handlePostUpdate }) {
   const [formData, setFormData] = useState({
     content: '',
     imgUrl: '',
@@ -10,14 +10,15 @@ export default function PostEdit({ currentUser, posts, handlePostUpdate }) {
   const { id } = useParams();
 
   
+  
  
-  useEffect(() => {
-    const fillOutFormData = () => {
-      const postItem = posts.find((post) => post.id === Number(id));
-      setFormData({ name: postItem.name });
-    };
-    if (posts.length) fillOutFormData();
-  }, [posts, id]);
+  // useEffect(() => {
+  //   const fillOutFormData = () => {
+  //     const postItem = posts.find((post) => post.id === Number(id));
+  //     setFormData({ name: postItem.name });
+  //   };
+  //   if (posts.length) fillOutFormData();
+  // }, [posts, id]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -25,6 +26,7 @@ export default function PostEdit({ currentUser, posts, handlePostUpdate }) {
       ...prevState,
       [name]: value,
     }));
+    console.log(formData)
   };
 
   
