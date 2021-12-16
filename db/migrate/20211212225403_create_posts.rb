@@ -1,6 +1,11 @@
 class CreatePosts < ActiveRecord::Migration[6.1]
   def change
-    add_column :posts, :user_id, :integer
-    add_foreign_key :posts, :users
+    create_table :posts do |t|
+      t.string :content
+      t.string :imgUrl
+      t.references :user, null: false, foreign_key: true
+
+      t.timestamps
+    end
   end
 end

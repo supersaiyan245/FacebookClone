@@ -15,9 +15,9 @@ export default function Layout({ currentUser, handleLogout, children }) {
               <button onClick={handleLogout}>Logout</button>
             </div>
           ) : (
-              <Link to='/Login'><h5>Login</h5></Link>
+              <Link className="link"to='/Login'>Login</Link>
           )}
-        <Link to='/Register'><h5>Register</h5></Link>
+        <Link className="link" to='/Register'>Register</Link>
         </navbar>
       {children}
     </div>
