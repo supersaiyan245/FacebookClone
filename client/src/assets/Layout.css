@@ -1,5 +1,5 @@
 .gridcontainers {
-  background: linear-gradient(to right, #d9ebe2, #b5e5e7);
+  background: linear-gradient(to right, #d9ebe2, #c3ebec);
   position: fixed;
   height: 8vh;
   width: 100%;
@@ -12,7 +12,7 @@ h5 {
 
 h3 {
   position: relative;
-  top: 40%;
+  top: 30%;
   text-transform: uppercase;
   color: rgba(20, 17, 17, 0.6);
   z-index: 20;

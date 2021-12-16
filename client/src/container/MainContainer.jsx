@@ -8,13 +8,11 @@ import { getAllUsers } from '../services/user.js';
 import Users from '../screens/Users.jsx';
 import Login from '../screens/Login.jsx';
 import Register from '../screens/Register.jsx';
-import { Link } from 'react-router-dom';
 
 export default function MainContainer({ currentUser, handleRegister, handleLogin }) {
   const [posts, setPosts] = useState([]);
   const [users, setUsers] = useState([]);
   const history = useHistory();
-  console.log(posts)
   useEffect(() => {
     const fetchUsers = async () => {
       const Users = await getAllUsers();

@@ -7,12 +7,12 @@
   background-image: linear-gradient(to top right, #acd5d7, #b9bcc2, #34c7cf );
   border-radius: 10px;
   box-shadow: 1px 0px 0px 0.2px antiquewhite;
-  width: 20vw;
-  height: 50vh;
+  width: 30vw;
+  height: 60vh;
   position: relative;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, 15vh);
+  transform: translate(-50%, 40%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,13 +20,14 @@
 
 h4 {
   position: relative;
-  top: -20px;
+  top: -30px;
   text-align: center;
 }
 
-label h4 {
+label h4 form {
   display:inline-flex;
   align-items: center;
+  justify-content: center;
 }
 input {
   position: relative;
@@ -37,8 +38,108 @@ p {
   text-align: center;
 }
 
-button {
+/* button {
   position: relative;
   top: 2vh;
-  left: 7vw;
+  left: 8vw;
+  right: 50%;
+} */
+
+@media screen and (max-width: 1015px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .RegisterContainer {
+    background-image: linear-gradient(to top right, #acd5d7, #b9bcc2, #34c7cf );
+    border-radius: 10px;
+    box-shadow: 1px 0px 0px 0.2px antiquewhite;
+    width: 30vw;
+    height: 60vh;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 40%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  h4 {
+    position: relative;
+    top: -30px;
+    text-align: center;
+  }
+  
+  label h4 form {
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  input {
+    position: relative;
+    width: 95%;
+  }
+  
+  p {
+    text-align: center;
+  }
+  
+   button {
+    position: relative;
+    top: 2vh;
+    left: 10vw;
+    right: 10vw;
+  } 
+  
+}
+
+@media screen and (max-width: 700px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .RegisterContainer {
+    background-image: linear-gradient(to top right, #acd5d7, #b9bcc2, #34c7cf );
+    border-radius: 10px;
+    box-shadow: 1px 0px 0px 0.2px antiquewhite;
+    width: 30vw;
+    height: 60vh;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 40%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  h4 {
+    position: relative;
+    top: -30px;
+    text-align: center;
+  }
+  
+  label h4 form {
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  input {
+    position: relative;
+    width: 95%;
+  }
+  
+  p {
+    text-align: center;
+  }
+  
+  button {
+    position: relative;
+    top: 2vh;
+    left: 10vw;
+    right: 10vw;
+  }
 }

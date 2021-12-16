@@ -6,7 +6,7 @@ export default function Posts({ posts, handlePostDelete, currentUser }) {
       {posts.map((post) => (
         <div key={post.id}>
             <p>{post.content}</p>
-            <img src={post.imgUrl}></img>
+            <img src={post.imgUrl} alt="user's image"></img>
           {currentUser?.id === post?.user_id && (
             <>
               <Link to={`/posts/${post.id}/edit`}>

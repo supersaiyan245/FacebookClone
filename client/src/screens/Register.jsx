@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import '../assets/Register.css'
 
 export default function Register({ handleRegister }) {

@@ -6,7 +6,6 @@ import { loginUser, registerUser,
   removeToken
 } from './services/auth';
 import { Switch, Route, useHistory } from 'react-router-dom';
-import Login from './screens/Login.jsx';
 import MainContainer from './container/MainContainer.jsx'
 
 function App() {
