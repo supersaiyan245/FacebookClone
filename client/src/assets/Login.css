@@ -12,7 +12,7 @@
   position: relative;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, 15vh);
+  transform: translate(-50%, 50%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,7 +20,7 @@
 
 h4 {
   position: relative;
-  top: -20px;
+  top: -30px;
   text-align: center;
 }
 
@@ -41,4 +41,7 @@ button {
   position: relative;
   top: 2vh;
   left: 7vw;
+  width: 40%;
+  height: 4vh;
+  border-radius: 20px;
 }

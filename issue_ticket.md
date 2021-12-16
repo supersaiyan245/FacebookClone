@@ -1,7 +1,7 @@
 PROJECT ISSUE TICKET
 
 Unexpected Behavior
-Register and other components aren't rendering
+Deployed site is not showing up
 
 Expected Behavior
 They should be rendering
@@ -16,10 +16,8 @@ Reproduce the Error
 6. See the subsequent error in the console.
 
 Documentation
-No errors at the current moment
+Failed to load resource: net::ERR_FAILED
 
 
 Attempted Resolution
-I've tried moving components around multiple times
-
-I've been looking at the class recordings
+I tried changing my cors url parameters
