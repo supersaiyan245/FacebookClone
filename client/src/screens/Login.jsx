@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import '../assets/Login.css'
 
 export default function Login({ handleLogin }) {
   const [formData, setFormData] = useState({
@@ -24,9 +25,9 @@ export default function Login({ handleLogin }) {
   return (
     <div className="loginContainer">
       <form onSubmit={handleSubmit}>
-        <h3>Login</h3>
+        <h4>Login</h4>
         <label className="email">
-        Email:
+        <p>Email:</p>
           <input
             type='text'
             name='email'
@@ -36,7 +37,7 @@ export default function Login({ handleLogin }) {
             </label>
             <br />
             <label className="password">
-              Password:
+              <p>Password:</p>
               <input
                 type='password'
                 name='password'
@@ -44,9 +45,7 @@ export default function Login({ handleLogin }) {
                 onChange={handleChange}
               />
             </label>
-          <br />
-
-            <button>Submit</button>
+          <button>Submit</button>
       </form>
     </div>
     
