@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import '../assets/Register.css'
 
 export default function Register({ handleRegister }) {
   const [formData, setFormData] = useState({
@@ -27,57 +28,58 @@ export default function Register({ handleRegister }) {
   
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h3>Register</h3>
-      <label>
-       First Name:
-        <input
-          type='text'
-          name='first_name`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        '
-          value={first_name}
-          onChange={handleChange}
-          />
-          </label>
-          <br />
-            <label>
-              Last Name:
-              <input
-                type='text'
-                name='last_name'
-                value={last_name}
-                onChange={handleChange}
-              />
-        </label>
-      <label>
-       age:
-        <input
-          type='intger'
-          name='age'
-          value={age}
-          onChange={handleChange}
-          />
-          </label>
-      <br />
-      <label>
-              Email:
-              <input
-                type='email'
-                name='email'got
-                value={email}
-                onChange={handleChange}
-              />
-        </label>
+    <div className="RegisterContainer">
+      <form onSubmit={handleSubmit}>
+        <h4>Register</h4>
         <label>
-                Password:
+        <p>First Name:</p>
+          <input
+            type='text'
+            name='first_name`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        '
+            value={first_name}
+            onChange={handleChange}
+            />
+            </label>
+            <br />
+              <label>
+              <p>Last Name:</p>
                 <input
-                  type='password'
-                  name='password'
-                  value={password}
+                  type='text'
+                  name='last_name'
+                  value={last_name}
                   onChange={handleChange}
                 />
           </label>
-          <Link to='/register'>Register</Link>
-          <button>Submit</button>
+        <label>
+        <p>age:</p>
+          <input
+            type='intger'
+            name='age'
+            value={age}
+            onChange={handleChange}
+            />
+            </label>
+        <br />
+        <label>
+        <p>Email:</p>
+                <input
+                  type='email'
+                  name='email'got
+                  value={email}
+                  onChange={handleChange}
+                />
+          </label>
+          <label>
+          <p>Password:</p>
+                  <input
+                    type='password'
+                    name='password'
+                    value={password}
+                    onChange={handleChange}
+                  />
+            </label>
+            <button>Submit</button>
         </form>
+    </div>
       );
     }

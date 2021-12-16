@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.RegisterContainer {
+  background-image: linear-gradient(to top right, #acd5d7, #b9bcc2, #34c7cf );
+  border-radius: 10px;
+  box-shadow: 1px 0px 0px 0.2px antiquewhite;
+  width: 20vw;
+  height: 50vh;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 15vh);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h4 {
+  position: relative;
+  top: -20px;
+  text-align: center;
+}
+
+label h4 {
+  display:inline-flex;
+  align-items: center;
+}
+input {
+  position: relative;
+  width: 95%;
+}
+
+p {
+  text-align: center;
+}
+
+button {
+  position: relative;
+  top: 2vh;
+  left: 7vw;
+}
