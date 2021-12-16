@@ -46,10 +46,9 @@ I am making a clone of the popular social media site known as Facebook. My clone
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | _Lorem ipsum dolor sit amet, consectetur._ |
-|   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
-| Material UI      | _Lorem ipsum dolor sit amet, consectetur._ |
-|  Ruby on Rails   | _Lorem ipsum dolor sit amet, consectetur._ |
+|      React       | Facebook Library for creating versatile applications_ |
+|   React Router   | React based package that allows multiple renders components._ |
+|  Ruby on Rails   | Backend SQL supporting databse _ |
 
 <br>
 
@@ -72,7 +71,8 @@ I am making a clone of the popular social media site known as Facebook. My clone
 
 #### Component Tree
 
-[Component Tree Sample](https://gist.git.generalassemb.ly/davidtwhitlatch/414107e2560ae0bb65e233570f2fe056#file-component-tree-png)
+![Screenshot (365)](https://user-images.githubusercontent.com/50060155/146370061-dd31afa0-a9b7-413d-9505-43df89320ff4.png)
+
 
 #### Component Architecture
 
@@ -81,12 +81,9 @@ I am making a clone of the popular social media site known as Facebook. My clone
 src
 |__ assets/
       |__ fonts
-      |__ graphics
-      |__ images
-      |__ mockups
 |__ components/
       |__ Header.jsx
-|__ services/
+|__ screens/
 
 ```
 
@@ -97,10 +94,9 @@ src
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
 | Create Homepage form    |    H     |     10 hrs      |     2 hrs     |    3 hrs    |
-| Create Sign In      |    H     |     10 hrs      |     1 hrs     |     TBD     |
-| Create Sign Up      |    H      |     5 hrs      |     3 hrs     |     TBD     |
-| Create Back-End     |     H     |     20 hrs      |     15 hrs     |     15     |
-| Create widgets      |   H       |     6 hrs      |     3 hrs     |     TBD     |
+| Create Sign In      |    H     |     10 hrs      |     1 hrs     |     10 hrs     |
+| Create Sign Up      |    H      |     5 hrs      |     3 hrs     |     10hrs     |
+| Create Back-End     |     H     |     20 hrs      |     15 hrs     |     25 hrs     |
 | Add User Authentication   |  H        |     20 hrs      |     10 hrs     |     10 hrs     |
 
 
