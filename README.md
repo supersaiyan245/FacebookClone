@@ -80,7 +80,7 @@ I am making a clone of the popular social media site known as Facebook. My clone
 
 src
 |__ assets/
-      |__ fonts
+      |__ css
 |__ components/
       |__ Header.jsx
 |__ screens/
