@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import '../assets/Layout.css'
 
 export default function Layout({ currentUser, handleLogout, children }) {
 
