@@ -24,11 +24,11 @@ export default function MainContainer({ currentUser, handleRegister, handleLogin
   }, []);
 
   useEffect(() => {
-    const fetchPosts = async () => {
-      const Posts = await getAllPosts();
+    const fetchPosts = async (id) => {
+      const Posts = await getAllPosts(id);
       setPosts(Posts);
     };
-    fetchPosts();
+    fetchPosts(currentUser?.id);
   }, []);
 
   const handlePostCreate = async (formData) => {
@@ -62,28 +62,23 @@ export default function MainContainer({ currentUser, handleRegister, handleLogin
         <Route path="/Register">
           <Register handleRegister={handleRegister} />
         </Route>
-       <main className="edit-post">
-          <Route path='/posts/:id/edit'>
-          <PostEdit posts={posts} handlePostUpdate={handlePostUpdate} />
-          </Route>
-        </main>
-        <article className="create-new-post">
-          <Route path='/posts/new'>
-            <PostCreate handlePostCreate={handlePostCreate} />
-          </Route>
-        </article>
-        <main>
-          <Route path='/'>
-            <div className="allposts">
-              <Users users={users}/>
-              <Posts
-                posts={posts}
-                handlePostDelete={handlePostDelete}
-                currentUser={currentUser}
-              />
-            </div>
-          </Route>
-        </main>
+        <Route path='/posts/:id/edit'>
+          <PostEdit
+            posts={posts}
+            currentUser={currentUser}
+            handlePostUpdate={handlePostUpdate} />
+        </Route>
+        <Route path='/posts/new'>
+          <PostCreate handlePostCreate={handlePostCreate} />
+        </Route>
+        <Route path="/" exact>
+          <Users users={users}/>
+          <Posts
+            posts={posts}
+            handlePostDelete={handlePostDelete}
+            currentUser={currentUser}
+          />
+        </Route>
         <aside className="left"></aside>
         <aside className="right"></aside>
       </Switch>

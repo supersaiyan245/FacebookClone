@@ -7,7 +7,7 @@ import { loginUser, registerUser,
 } from './services/auth';
 import { Switch, Route, useHistory } from 'react-router-dom';
 import Login from './screens/Login.jsx';
-import Container from './container/MainContainer.jsx'
+import MainContainer from './container/MainContainer.jsx'
 
 function App() {
 
@@ -44,13 +44,11 @@ function App() {
   <div className='App'>
     <Layout currentUser={currentUser} handleLogout={handleLogout}>
       <Switch>
-        <Route path='/'>
-            <Container
-              currentUser={currentUser}
-              handleRegister={handleRegister}
-              handleLogin={handleLogin}
-            />
-        </Route>
+        <MainContainer
+          currentUser={currentUser}
+          handleRegister={handleRegister}
+          handleLogin={handleLogin}
+        />
       </Switch>
     </Layout>
   </div>

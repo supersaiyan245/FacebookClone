@@ -9,7 +9,7 @@ export default function Register({ handleRegister }) {
     email: '',
     password: '',
   });
-  const {first_name, last_name, age, email, password } = formData;
+  const { first_name, last_name, age, email, password } = formData;
 
   const handleChange = (e) => {
     const { name, value } = e.target;

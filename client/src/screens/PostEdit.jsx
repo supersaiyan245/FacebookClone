@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
-export default function PostEdit({ posts, handlePostUpdate }) {
+export default function PostEdit({ currentUser, posts, handlePostUpdate }) {
   const [formData, setFormData] = useState({
     content: '',
     imgUrl: '',
@@ -9,6 +9,7 @@ export default function PostEdit({ posts, handlePostUpdate }) {
   const { content, imgUrl } = formData;
   const { id } = useParams();
 
+  
  
   useEffect(() => {
     const fillOutFormData = () => {
@@ -31,7 +32,7 @@ export default function PostEdit({ posts, handlePostUpdate }) {
     <form
       onSubmit={(e) => {
         e.preventDefault();
-        handlePostUpdate(id, formData);
+        handlePostUpdate(currentUser.id, id, formData);
       }}
     >
       <h3>Edit Post</h3>
